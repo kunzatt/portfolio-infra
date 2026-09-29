@@ -110,43 +110,41 @@
         <div class="project-meta">
           <span class="career-company-label">회사 경력</span>
           <div class="project-title">㈜프타 (Ptah) AXP팀</div>
-          <div class="project-position">AI &amp; Backend Developer</div>
+          <div class="project-position">Platform &amp; Infrastructure Developer</div>
           <div class="project-period">2026.03 – Present</div>
         </div>
         <div class="project-content">
-          <p class="project-desc">AXP팀에서 AI 서비스와 이를 안정적으로 운영하기 위한 백엔드·플랫폼을 함께 개발하고 있습니다. 멀티테넌트 RAG API <strong>Maat</strong>의 문서 검색·답변 생성 흐름을 구현하고, API·데이터·권한·캐시의 정합성과 장애 복구까지 서비스 전반을 설계하고 있습니다.</p>
+          <p class="project-desc">AXP팀에서 AI 서비스가 안정적으로 동작하도록 백엔드와 운영 인프라를 함께 개발하고 있습니다. Docker Compose 기반 서비스 구성과 PostgreSQL·Redis·Milvus 데이터 계층을 관리하고, 멀티테넌트 권한·캐시·비동기 작업의 정합성부터 관측·배포·장애 복구까지 운영 전반을 개선하고 있습니다.</p>
           <div class="project-role">
             <div class="role-header">
               <span class="role-header-label">담당 업무</span>
-              <span class="role-team">AI &amp; Backend Developer</span>
+              <span class="role-team">Platform &amp; Infrastructure Developer</span>
             </div>
             <div class="role-item">
-              <span class="role-label">AI Service</span>
-              <span class="role-desc">Maat의 문서 수집·청킹·검색·인용 검증과 답변 생성으로 이어지는 RAG 흐름 설계 및 구현</span>
+              <span class="role-label">Infrastructure</span>
+              <span class="role-desc">Docker Compose 기반 서비스 구성과 의존성 관리, 안전한 배포·롤백 및 장애 복구 기준 수립</span>
             </div>
             <div class="role-item">
-              <span class="role-label">Backend API</span>
-              <span class="role-desc">FastAPI 기반 서버 간 API와 Engine API, 요청·응답 검증 및 예외·재시도 흐름 구현</span>
+              <span class="role-label">Reliability</span>
+              <span class="role-desc">외부 API와 비동기 작업의 재시도·멱등성·상태 전이를 설계해 지연과 부분 장애 격리</span>
             </div>
             <div class="role-item">
               <span class="role-label">Data &amp; Security</span>
-              <span class="role-desc">문서 버전·색인 상태 관리, API Key 기반 Tenant 격리와 Rate Limit·Fail-Closed 정책 구현</span>
+              <span class="role-desc">PostgreSQL·Redis·Milvus 상태 관리, API Key 기반 Tenant 격리와 Rate Limit·Fail-Closed 정책 구현</span>
             </div>
             <div class="role-item">
-              <span class="role-label">Platform Ops</span>
-              <span class="role-desc">워크스페이스·권한 흐름 진단, 캐시 영속성 안정화와 안전한 배포·장애 복구 기준 수립</span>
+              <span class="role-label">Observability</span>
+              <span class="role-desc">Prometheus·Grafana 지표와 지연 API 자동 계측을 구축하고 캐시·쿼리 병목 진단</span>
             </div>
           </div>
           <div class="project-stack">
             <div class="stack-header">업무 기술</div>
             <div class="stack-group">
-              <span class="stack-label">AI</span>
+              <span class="stack-label">Infra &amp; Ops</span>
               <div class="stack-tags">
-                <span class="stack-tag">RAG</span>
-                <span class="stack-tag">KURE-v1</span>
-                <span class="stack-tag">Dense Retrieval</span>
-                <span class="stack-tag">BM25</span>
-                <span class="stack-tag">Docling</span>
+                <span class="stack-tag">Docker Compose</span>
+                <span class="stack-tag">Prometheus</span>
+                <span class="stack-tag">Grafana</span>
               </div>
             </div>
             <div class="stack-group">
@@ -161,44 +159,41 @@
               </div>
             </div>
             <div class="stack-group">
-              <span class="stack-label">Data &amp; Infra</span>
+              <span class="stack-label">Data &amp; Cache</span>
               <div class="stack-tags">
                 <span class="stack-tag">PostgreSQL</span>
                 <span class="stack-tag">Redis</span>
                 <span class="stack-tag">Milvus</span>
-                <span class="stack-tag">Docker Compose</span>
               </div>
             </div>
             <div class="stack-group">
-              <span class="stack-label">Test &amp; Ops</span>
+              <span class="stack-label">Test</span>
               <div class="stack-tags">
                 <span class="stack-tag">unittest</span>
                 <span class="stack-tag">FastAPI TestClient</span>
-                <span class="stack-tag">Prometheus</span>
-                <span class="stack-tag">Grafana</span>
               </div>
             </div>
           </div>
           <div class="highlights">
             <div class="career-highlights-header">주요 성과</div>
             <details>
-              <summary>문서 버전 롤백이 가능한 RAG 색인 파이프라인 — Docling·KURE-v1·Milvus 연계</summary>
+              <summary>신규 데이터 배포 실패에도 서비스를 유지하는 버전 전환 구조</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 기업 문서를 답변 근거로 사용하려면 PDF와 Markdown의 구조를 보존해 검색 가능한 단위로 변환하고, 새 문서 버전의 색인이 실패해도 기존 서비스가 중단되지 않아야 했습니다. 단순 벡터 유사도만으로는 질문의 핵심 용어와 문서 섹션을 정확히 반영하지 못하는 경우도 있었습니다.</p>
-                <p><strong>[해결 방안]</strong> Docling으로 문서를 구조 기반 청킹하고 KURE-v1 1024차원 임베딩을 생성해 Milvus에 색인했습니다. Dense 검색 후보를 본문·섹션 임베딩과 BM25로 재정렬하고, 질문에 명시된 문서명을 인식해 검색 범위를 자동으로 축소했습니다. PostgreSQL에서 문서 버전과 색인 상태를 관리해 신규 버전 색인이 완료된 뒤에만 활성 버전을 전환하도록 설계했습니다.</p>
-                <p><strong>[결과]</strong> 문서 파싱부터 검색·재정렬까지 이어지는 RAG 파이프라인을 구축하고, 신규 색인 실패 시 기존 활성 버전을 유지하는 무중단 롤백 구조를 구현했습니다.</p>
+                <p><strong>[문제 상황]</strong> 새 문서를 처리하고 색인하는 여러 단계 중 하나라도 실패하면 불완전한 데이터가 활성화되거나 기존 검색 서비스까지 중단될 위험이 있었습니다.</p>
+                <p><strong>[해결 방안]</strong> PostgreSQL에서 문서 버전과 단계별 색인 상태를 관리하고, Milvus 색인이 모두 완료된 뒤에만 활성 버전을 전환하도록 설계했습니다. 신규 작업이 실패하면 이전 활성 버전을 그대로 유지하고 실패 상태와 복구 지점을 확인할 수 있게 했습니다.</p>
+                <p><strong>[결과]</strong> 신규 데이터 배포 실패가 서비스 중단으로 이어지지 않도록 격리하고, 이전 버전으로 즉시 복구 가능한 무중단 전환 구조를 구현했습니다.</p>
               </div>
             </details>
             <details>
-              <summary>RAG 품질 자동 평가와 응답 성능 개선 — 43.58초 → 5.29초</summary>
+              <summary>외부 AI API 장애 격리와 응답 성능 개선 — 43.58초 → 5.29초</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 검색 파이프라인 변경이 실제 품질 향상으로 이어지는지 반복적으로 확인할 기준이 없었고, 문서 답변 생성에 최대 43.58초가 소요돼 서버 간 API로 사용하기 어려웠습니다. 잘못된 인용과 LLM의 408·429·5xx, 응답 잘림도 운영 안정성을 떨어뜨렸습니다.</p>
-                <p><strong>[해결 방안]</strong> 문서 오염·금지 문서 검색·필수 내용 포함 여부를 포함한 27개 평가 케이스와 Recall@K·MRR·근거 없음 정확도 측정을 자동화했습니다. 실제 사용된 근거만 인용으로 반환하도록 검증하고, 외부 오류 재시도와 응답 잘림 감지·재생성, 출력 토큰 조정을 적용했습니다.</p>
-                <p><strong>[결과]</strong> 기존 26문항 기준선에서 Recall@3 1.0, MRR 1.0, 근거 없음 정확도 1.0을 달성하고 문서 답변 생성 시간을 43.58초에서 5.29초로 단축했습니다. 테스트 77개 중 73개가 통과했으며 선택적 외부 통합 테스트 4개는 환경 미설정 시 skip되도록 구성했습니다.</p>
+                <p><strong>[문제 상황]</strong> 문서 답변 생성에 최대 43.58초가 소요됐고, 외부 LLM의 408·429·5xx 오류와 응답 잘림이 서버 간 API의 안정성을 떨어뜨렸습니다.</p>
+                <p><strong>[해결 방안]</strong> 외부 오류 유형별 재시도와 응답 잘림 감지·재생성 흐름을 적용하고 출력 토큰을 조정했습니다. 27개 평가 케이스와 Recall@K·MRR 측정을 자동화해 성능 개선 과정에서 검색 품질이 퇴행하지 않는지도 함께 검증했습니다.</p>
+                <p><strong>[결과]</strong> 문서 답변 생성 시간을 43.58초에서 5.29초로 단축하고, 외부 서비스의 일시적 장애와 불완전한 응답을 애플리케이션 내부에서 복구할 수 있게 했습니다.</p>
               </div>
             </details>
             <details>
-              <summary>메일 발송 신뢰성 개선 — 비동기 Queue와 멱등성 기반 중복 방지</summary>
+              <summary>비동기 작업 신뢰성 개선 — Queue·재시도·멱등성 기반 메일 발송</summary>
               <div class="detail-body">
                 <p><strong>[문제 상황]</strong> 메일을 요청 스레드에서 직접 발송해 외부 서비스의 응답이 느려지면 API 요청까지 지연됐습니다. 재시도나 서버 재시작 과정에서 동일한 메일이 중복 발송될 가능성도 있었습니다.</p>
                 <p><strong>[해결 방안]</strong> 발송 과정을 Queue·Worker·Provider Adapter로 분리하고, 일시적 장애에는 Backoff 재시도를 적용했습니다. SHA-256 기반 멱등성 키로 외부 호출 전에 발송권을 선점하고 <code>SENDING</code>·<code>SENT</code>·<code>FAILED</code> 상태 전이를 관리했습니다. 영구 반송과 스팸 신고는 재발송 대상에서 제외했습니다.</p>
@@ -206,7 +201,7 @@
               </div>
             </details>
             <details>
-              <summary>로그인 이후 첫 화면 성능 개선 — 요청 범위 캐싱과 지연 API 자동 계측</summary>
+              <summary>지연 API 자동 관측과 요청 범위 캐싱으로 병목 개선</summary>
               <div class="detail-body">
                 <p><strong>[문제 상황]</strong> 로그인 이후 화면을 구성하면서 동일한 사용자·워크스페이스·모듈 데이터를 반복 조회하는 N+1 형태의 문제가 있었습니다. 느린 API도 사용자가 직접 화면을 조작해야 발견할 수 있었습니다.</p>
                 <p><strong>[해결 방안]</strong> 요청 범위 캐시를 적용해 동일한 ID의 조회 결과와 미존재 결과까지 한 번만 조회하도록 개선했습니다. 공통 요청 처리 구간에서 서버 시간을 측정하고, 300ms를 초과한 요청을 비동기로 수집해 요청별 count·avg·max·p95를 확인할 수 있도록 구성했습니다.</p>
