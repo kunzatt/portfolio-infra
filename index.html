@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>김용명 — AI &amp; Backend Engineer</title>
+  <title>김용명 — Infrastructure &amp; Platform Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=20260812-4">
@@ -46,14 +46,14 @@
         </div>
       </div>
       <div class="hero-content">
-        <h1>AI를 실제 서비스로 만드는 엔지니어, 김용명입니다.</h1>
+        <h1>배포와 장애 상황에서도 서비스를 지키는 인프라 엔지니어, 김용명입니다.</h1>
         <div class="hero-intro">
-          <p>문서를 검색 가능한 데이터로 만들고, 질문에 필요한 정보를 찾아 답변으로 이어지는 흐름을 구현합니다.</p>
-          <p>AI 기능을 API와 화면에 연동하고, 모델의 응답이 애플리케이션에서 처리 가능한 형태인지 검증합니다.</p>
-          <p>안정적인 운영을 위해 데이터 정합성, 권한과 보안, 장애 복구까지 함께 고려합니다.</p>
-          <p>로그와 지표로 원인을 좁히고, 테스트와 부하 측정으로 개선 효과를 검증합니다.</p>
-          <p>기술을 선택한 이유와 문제 해결 과정에서 얻은 내용을 기록해 동료와 공유합니다.</p>
-          <p>팀에서는 적극적으로 의견을 나누며 명확하고 배려 있는 언어로 소통합니다.</p>
+          <p>배포 전에 실행 중인 시스템과의 호환성을 검증하고, 판단할 수 없으면 배포를 멈추는 Fail-Closed 게이트를 설계합니다.</p>
+          <p>힙·디스크·커넥션·로그 같은 자원에 상한을 두어 한 지점의 고갈이 전체 장애로 번지지 않게 합니다.</p>
+          <p>캐시가 유실되거나 재기동되어도 원본 저장소에서 데이터를 복원하는 자가 복구 흐름을 구성합니다.</p>
+          <p>시크릿을 코드와 설정 파일에서 분리하고, 환경별로 안전하게 주입합니다.</p>
+          <p>장애 원인을 로그와 지표로 좁히고, 대응 기준과 복구 절차를 문서로 남겨 동료와 공유합니다.</p>
+          <p>팀에서는 근거를 바탕으로 의견을 나누고, 명확하고 배려 있는 언어로 소통합니다.</p>
         </div>
       </div>
     </div>
@@ -67,33 +67,30 @@
     <div class="skills-grid">
 
       <div class="skill-group">
-        <h3>AI</h3>
+        <h3>Infra &amp; Ops</h3>
         <ul>
-          <li>Spring AI · RAG</li>
-          <li>Docling · Sentence Transformers</li>
-          <li>Vector Search · BM25 Reranking</li>
+          <li>Docker · Docker Compose</li>
+          <li>Jenkins · nginx · AWS</li>
+          <li>Linux · Shell Script</li>
+          <li>Prometheus · Grafana · Micrometer</li>
         </ul>
       </div>
 
       <div class="skill-group">
-        <h3>Backend & Test</h3>
+        <h3>Data &amp; Messaging</h3>
         <ul>
-          <li>Java · Spring Boot</li>
+          <li>Infinispan · Redis · Kafka</li>
+          <li>MySQL · Oracle · PostgreSQL</li>
+          <li>Object Storage</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Backend &amp; Test</h3>
+        <ul>
+          <li>Java · Spring Boot · Spring Security</li>
           <li>Python · FastAPI</li>
-          <li>Spring Security · Spring Data JPA</li>
-          <li>Querydsl · MyBatis</li>
           <li>JUnit5 · Mockito · k6</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3>Data &amp; Infrastructure</h3>
-        <ul>
-          <li>MySQL · PostgreSQL · MongoDB</li>
-          <li>Redis · Milvus · pgvector</li>
-          <li>Docker · Jenkins · nginx</li>
-          <li>Prometheus · Grafana · Sentry</li>
-          <li>AWS</li>
         </ul>
       </div>
 
@@ -114,27 +111,27 @@
           <div class="project-period">2026.03 – Present</div>
         </div>
         <div class="project-content">
-          <p class="project-desc">AXP팀에서 AI 서비스가 안정적으로 동작하도록 백엔드와 운영 인프라를 함께 개발하고 있습니다. Docker Compose 기반 서비스 구성과 PostgreSQL·Redis·Milvus 데이터 계층을 관리하고, 멀티테넌트 권한·캐시·비동기 작업의 정합성부터 관측·배포·장애 복구까지 운영 전반을 개선하고 있습니다.</p>
+          <p class="project-desc">AXP팀에서 Ptah의 메타데이터 기반 멀티테넌트 플랫폼(Spring Boot 3·Java 17)의 배포와 운영 인프라를 담당하고 있습니다. API 서버와 캐시 서버가 분리된 구조에서 배포 안전성, 자원 한계, 데이터 복구, 시크릿 관리처럼 장애와 직결되는 영역을 개선하고 있습니다.</p>
           <div class="project-role">
             <div class="role-header">
               <span class="role-header-label">담당 업무</span>
               <span class="role-team">Platform &amp; Infrastructure Developer</span>
             </div>
             <div class="role-item">
-              <span class="role-label">Infrastructure</span>
-              <span class="role-desc">Docker Compose 기반 서비스 구성과 의존성 관리, 안전한 배포·롤백 및 장애 복구 기준 수립</span>
+              <span class="role-label">Deployment</span>
+              <span class="role-desc">캐시 호환성 지문 기반 Fail-Closed 배포 게이트, Health Check 이후 릴리스 전환과 이전 버전 보존</span>
             </div>
             <div class="role-item">
               <span class="role-label">Reliability</span>
-              <span class="role-desc">외부 API와 비동기 작업의 재시도·멱등성·상태 전이를 설계해 지연과 부분 장애 격리</span>
+              <span class="role-desc">캐시 서버의 힙·디스크·커넥션 상한과 영속 스토어 내구성 강화, Kafka Consumer 역할 분리</span>
             </div>
             <div class="role-item">
-              <span class="role-label">Data &amp; Security</span>
-              <span class="role-desc">PostgreSQL·Redis·Milvus 상태 관리, API Key 기반 Tenant 격리와 Rate Limit·Fail-Closed 정책 구현</span>
+              <span class="role-label">Recovery &amp; Security</span>
+              <span class="role-desc">Object Storage 기반 캐시 데이터 복원·백필, 설정 파일 시크릿의 암호화 저장소 이관과 환경 변수 주입</span>
             </div>
             <div class="role-item">
-              <span class="role-label">Observability</span>
-              <span class="role-desc">Prometheus·Grafana 지표와 지연 API 자동 계측을 구축하고 캐시·쿼리 병목 진단</span>
+              <span class="role-label">Operations</span>
+              <span class="role-desc">컨테이너·애플리케이션 로그 보존 상한 설정, 헬스 프로브 정비와 복구 절차 문서화</span>
             </div>
           </div>
           <div class="project-stack">
@@ -142,70 +139,72 @@
             <div class="stack-group">
               <span class="stack-label">Infra &amp; Ops</span>
               <div class="stack-tags">
-                <span class="stack-tag">Docker Compose</span>
-                <span class="stack-tag">Prometheus</span>
-                <span class="stack-tag">Grafana</span>
-              </div>
-            </div>
-            <div class="stack-group">
-              <span class="stack-label">Backend</span>
-              <div class="stack-tags">
-                <span class="stack-tag">Python</span>
-                <span class="stack-tag">FastAPI</span>
-                <span class="stack-tag">Pydantic</span>
-                <span class="stack-tag">Java</span>
-                <span class="stack-tag">Spring Boot</span>
-                <span class="stack-tag">Spring Security</span>
+                <span class="stack-tag">Docker</span>
+                <span class="stack-tag">Jenkins</span>
+                <span class="stack-tag">Shell Script</span>
+                <span class="stack-tag">Gradle</span>
+                <span class="stack-tag">Logback</span>
               </div>
             </div>
             <div class="stack-group">
               <span class="stack-label">Data &amp; Cache</span>
               <div class="stack-tags">
-                <span class="stack-tag">PostgreSQL</span>
-                <span class="stack-tag">Redis</span>
-                <span class="stack-tag">Milvus</span>
+                <span class="stack-tag">Infinispan</span>
+                <span class="stack-tag">Kafka</span>
+                <span class="stack-tag">Object Storage</span>
+                <span class="stack-tag">MySQL</span>
+                <span class="stack-tag">Oracle</span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <span class="stack-label">Backend</span>
+              <div class="stack-tags">
+                <span class="stack-tag">Java 17</span>
+                <span class="stack-tag">Spring Boot 3</span>
+                <span class="stack-tag">Spring Kafka</span>
+                <span class="stack-tag">Python</span>
               </div>
             </div>
             <div class="stack-group">
               <span class="stack-label">Test</span>
               <div class="stack-tags">
-                <span class="stack-tag">unittest</span>
-                <span class="stack-tag">FastAPI TestClient</span>
+                <span class="stack-tag">JUnit5</span>
+                <span class="stack-tag">Mockito</span>
               </div>
             </div>
           </div>
           <div class="highlights">
             <div class="career-highlights-header">주요 성과</div>
             <details>
-              <summary>신규 데이터 배포 실패에도 서비스를 유지하는 버전 전환 구조</summary>
+              <summary>캐시 호환성 지문 기반 배포 게이트 — 판단할 수 없으면 배포를 멈추는 Fail-Closed 배포</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 새 문서를 처리하고 색인하는 여러 단계 중 하나라도 실패하면 불완전한 데이터가 활성화되거나 기존 검색 서비스까지 중단될 위험이 있었습니다.</p>
-                <p><strong>[해결 방안]</strong> PostgreSQL에서 문서 버전과 단계별 색인 상태를 관리하고, Milvus 색인이 모두 완료된 뒤에만 활성 버전을 전환하도록 설계했습니다. 신규 작업이 실패하면 이전 활성 버전을 그대로 유지하고 실패 상태와 복구 지점을 확인할 수 있게 했습니다.</p>
-                <p><strong>[결과]</strong> 신규 데이터 배포 실패가 서비스 중단으로 이어지지 않도록 격리하고, 이전 버전으로 즉시 복구 가능한 무중단 전환 구조를 구현했습니다.</p>
+                <p><strong>[문제 상황]</strong> API 서버와 캐시 서버가 분리되어 있어, 캐시 서버가 보유한 데이터 구조와 호환되지 않는 API를 배포하면 배포 직후 조회·저장이 깨질 수 있었습니다. 불일치를 해소하려고 캐시 서버를 자동으로 재기동하면 데이터 복구 범위가 커지는 위험도 있었습니다.</p>
+                <p><strong>[해결 방안]</strong> 배포 후보 빌드와 실행 중인 캐시 서버에서 각각 SHA-256 호환성 지문을 계산해 기존 API 컨테이너를 내리기 전에 비교하도록 배포 스크립트를 구성했습니다. 지문이 다르거나 조회에 실패하면 배포를 중단하고, 캐시 서버 재기동은 자동으로 수행하지 않고 수동 확인을 거치도록 했습니다. 자동 배포에서는 차단된 커밋을 기록해 두고, 캐시 지문이 바뀌기 전까지는 같은 빌드를 반복하지 않도록 했습니다.</p>
+                <p><strong>[결과]</strong> 릴리스 링크는 Health Check를 통과한 뒤에만 현재 버전으로 전환하고 이전 버전 링크를 함께 보존해 즉시 롤백할 수 있게 했습니다. 호환되지 않는 배포가 운영 중인 캐시 데이터에 영향을 주기 전에 차단하는 배포 기준을 마련했습니다.</p>
               </div>
             </details>
             <details>
-              <summary>외부 AI API 장애 격리와 응답 성능 개선 — 43.58초 → 5.29초</summary>
+              <summary>캐시 서버 자원 고갈 장애 대응 — 힙·디스크·커넥션 상한과 영속 스토어 내구성 강화</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 문서 답변 생성에 최대 43.58초가 소요됐고, 외부 LLM의 408·429·5xx 오류와 응답 잘림이 서버 간 API의 안정성을 떨어뜨렸습니다.</p>
-                <p><strong>[해결 방안]</strong> 외부 오류 유형별 재시도와 응답 잘림 감지·재생성 흐름을 적용하고 출력 토큰을 조정했습니다. 27개 평가 케이스와 Recall@K·MRR 측정을 자동화해 성능 개선 과정에서 검색 품질이 퇴행하지 않는지도 함께 검증했습니다.</p>
-                <p><strong>[결과]</strong> 문서 답변 생성 시간을 43.58초에서 5.29초로 단축하고, 외부 서비스의 일시적 장애와 불완전한 응답을 애플리케이션 내부에서 복구할 수 있게 했습니다.</p>
+                <p><strong>[문제 상황]</strong> Node 저장소인 Infinispan 캐시 서버에서 캐시별 엔트리 상한이 누적되어 힙이 고갈되고, 약 500MB 크기의 영속 파일은 비정상 종료 시 복구 범위가 컸습니다. 요청마다 HTTP Client를 생성해 Ephemeral Port가 고갈되었고, 헬스 프로브가 좀비 프로세스로 남는 문제도 있었습니다.</p>
+                <p><strong>[해결 방안]</strong> 캐시당 엔트리를 25,000개로 제한하고 SoftIndex 영속 파일 크기를 32MB로 줄이며 Graceful Stop을 추가했습니다. 릴레이 요청은 공유 커넥션 풀(전체 64, Route당 32)로 전환하고, 헬스 프로브에는 5초 타임아웃과 컨테이너 init 프로세스를 적용했습니다. 수백만 Node를 메모리에 올리는 무결성 감사는 <code>AtomicReference</code> CAS로 단일 실행을 보장했습니다.</p>
+                <p><strong>[결과]</strong> 디스크 여유 공간이 2GiB 또는 10% 미만이면 쓰기를 507로 차단하고, 공간 확인 자체가 실패해도 차단하는 Fail-Closed 게이트를 적용했습니다. 캐시 서버가 같은 Consumer Group에 참여해 사용량 이벤트를 가져가던 문제도 설정 플래그로 Consumer를 API 서버에만 활성화해 분리했습니다.</p>
               </div>
             </details>
             <details>
-              <summary>비동기 작업 신뢰성 개선 — Queue·재시도·멱등성 기반 메일 발송</summary>
+              <summary>캐시 데이터 자가 복구 — Object Storage 기반 부팅 시 복원과 백필</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 메일을 요청 스레드에서 직접 발송해 외부 서비스의 응답이 느려지면 API 요청까지 지연됐습니다. 재시도나 서버 재시작 과정에서 동일한 메일이 중복 발송될 가능성도 있었습니다.</p>
-                <p><strong>[해결 방안]</strong> 발송 과정을 Queue·Worker·Provider Adapter로 분리하고, 일시적 장애에는 Backoff 재시도를 적용했습니다. SHA-256 기반 멱등성 키로 외부 호출 전에 발송권을 선점하고 <code>SENDING</code>·<code>SENT</code>·<code>FAILED</code> 상태 전이를 관리했습니다. 영구 반송과 스팸 신고는 재발송 대상에서 제외했습니다.</p>
-                <p><strong>[결과]</strong> 외부 메일 서비스의 지연을 API 요청과 분리하고 재시도 과정의 중복 발송을 방지했습니다. Rate Limit과 개인정보 마스킹을 적용했으며, 신규 40개를 포함한 전체 테스트 578개를 통과했습니다.</p>
+                <p><strong>[문제 상황]</strong> 캐시 디렉터리를 교체하거나 비우면 워크스페이스·모듈 목록이 빈 결과로 조회됐습니다. 목록 쿼리는 캐시 서버의 Lucene 인덱스 위에서 동작해 원본 저장소로 지연 조회할 수 없었고, 로컬 개발 환경은 모두 같은 저장소 경로를 공유해 개발자 간 워크스페이스 데이터가 섞였습니다.</p>
+                <p><strong>[해결 방안]</strong> 부팅 시 설정 데이터 재적재 → 우선 복원 → 전체 타입 복원 → 역방향 백필 순서로 동작하는 복원 로더를 구현하고, 키 단위 병렬 복원과 건수 검증을 적용했습니다. 복원 중에는 저장소로 다시 쓰지 않도록 가드를 두었고, 수동 복원 트리거도 제공했습니다.</p>
+                <p><strong>[결과]</strong> 개발·운영 환경은 캐시와 Object Storage를 양방향으로 동기화해 캐시 유실 후에도 자동으로 복구되도록 하고, 로컬 환경은 미러링을 끄고 로컬 캐시만 사용하도록 분리해 데이터 혼선을 차단했습니다.</p>
               </div>
             </details>
             <details>
-              <summary>지연 API 자동 관측과 요청 범위 캐싱으로 병목 개선</summary>
+              <summary>시크릿 관리 체계 정비 — 설정 파일의 API Key를 암호화 저장소와 환경 변수 주입으로 이관</summary>
               <div class="detail-body">
-                <p><strong>[문제 상황]</strong> 로그인 이후 화면을 구성하면서 동일한 사용자·워크스페이스·모듈 데이터를 반복 조회하는 N+1 형태의 문제가 있었습니다. 느린 API도 사용자가 직접 화면을 조작해야 발견할 수 있었습니다.</p>
-                <p><strong>[해결 방안]</strong> 요청 범위 캐시를 적용해 동일한 ID의 조회 결과와 미존재 결과까지 한 번만 조회하도록 개선했습니다. 공통 요청 처리 구간에서 서버 시간을 측정하고, 300ms를 초과한 요청을 비동기로 수집해 요청별 count·avg·max·p95를 확인할 수 있도록 구성했습니다.</p>
-                <p><strong>[결과]</strong> 응답 형식을 변경하지 않고 반복 조회를 제거했으며, 느린 요청을 자동으로 발견하고 비교할 수 있는 성능 진단 기반을 마련했습니다. Java 컴파일과 전체 Gradle 테스트를 통과했습니다.</p>
+                <p><strong>[문제 상황]</strong> 외부 AI·협업 도구 API Key, 클라우드 자격 증명, JWT·OAuth 키가 환경 설정 파일에 흩어져 있어 저장소에 시크릿이 남고, 키를 교체할 때마다 설정 파일 수정과 재배포가 필요했습니다.</p>
+                <p><strong>[해결 방안]</strong> 플랫폼 저장소에 암호화된 시크릿을 먼저 조회하고, 없을 때만 환경 변수로 Fallback하는 시크릿 서비스를 구현했습니다. 부팅 시 멱등하게 동작하는 Importer로 기존 값을 이관하고, AI 클라이언트·협업 도구·클라우드 SDK·인증 모듈이 모두 같은 경로로 시크릿을 읽도록 전환했습니다.</p>
+                <p><strong>[결과]</strong> 암호화 키는 설정 파일의 리터럴을 제거하고 환경 변수로만 주입하도록 바꿔, 저장소에 커밋되는 시크릿을 제거했습니다. 시크릿 영속 데이터는 Object Storage 미러링으로 보강해 캐시 유실 시에도 복원되도록 했습니다.</p>
               </div>
             </details>
           </div>
